@@ -9,11 +9,7 @@ app.use(cors())
 
 dotenv.config()
 app.use(express.json())
-app.use(cors({
-    origin: "https://draw-code-rithvik.vercel.app", // Your frontend URL
-    methods: ["GET", "POST"],
-    credentials: true, // If needed
-}));
+
 const { Server } = require("socket.io")
 app.use(express.static(path.join(__dirname, "public")))
 
@@ -21,13 +17,9 @@ app.use(express.static(path.join(__dirname, "public")))
 const server = http.createServer(app)
 const io = new Server(server, {
 	cors: {
-		origin: "https://draw-code.vercel.app", // Only the base URL, no specific path
-		methods: ["GET", "POST"], // Allowed methods
-		allowedHeaders: ["Content-Type"], // Allowed headers
-		credentials: true, // Allow credentials if necessary
+		origin: "*",  
 	},
-});
-
+})
 
 let userSocketMap = []
 
