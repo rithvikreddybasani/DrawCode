@@ -7,13 +7,9 @@ const ACTIONS = require("./utils/actions")
 const path = require("path")
 app.use(cors())
 
-dotenv.config()
+
 app.use(express.json())
-app.use(cors({
-    origin: "https://draw-code-rithvik.vercel.app", // Your frontend URL
-    methods: ["GET", "POST"],
-    credentials: true // Include if your frontend sends credentials
-}));
+
 const { Server } = require("socket.io")
 app.use(express.static(path.join(__dirname, "public")))
 
