@@ -7,7 +7,12 @@ const ACTIONS = require("./utils/actions");
 const path = require("path");
 dotenv.config();
 
-app.use(cors({ origin: "https://draw-code-rithvik.vercel.app" }));
+aapp.use(cors({ 
+  origin: "https://draw-code-rithvik.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(express.json());
 
 const { Server } = require("socket.io");
