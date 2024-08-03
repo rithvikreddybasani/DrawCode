@@ -15,7 +15,7 @@ const SocketProvider = ({ children }) => {
     const socket = useMemo(
         () =>
             io(BACKEND_URL, {
-                reconnectionAttempts: 2,
+                reconnectionAttempts: 20,
                 
             }),
         [],
