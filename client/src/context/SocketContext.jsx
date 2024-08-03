@@ -6,7 +6,7 @@ import { createContext, useCallback, useEffect, useMemo } from "react"
 import { toast } from "react-hot-toast"
 import { io } from "socket.io-client"
 
-const BACKEND_URL = "https://draw-code.vercel.app/socket"
+const BACKEND_URL = "https://draw-code.vercel.app/socketio"
 
 const SocketContext = createContext()
 
