@@ -17,9 +17,13 @@ app.use(express.static(path.join(__dirname, "public")))
 const server = http.createServer(app)
 const io = new Server(server, {
 	cors: {
-		origin: "https://draw-code-rithvik.vercel.app/socket.io",  
+		origin: "https://draw-code-rithvik.vercel.app", // Only the base URL, no specific path
+		methods: ["GET", "POST"], // Allowed methods
+		allowedHeaders: ["Content-Type"], // Allowed headers
+		credentials: true, // Allow credentials if necessary
 	},
-})
+});
+
 
 let userSocketMap = []
 
