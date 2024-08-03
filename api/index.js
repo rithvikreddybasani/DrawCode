@@ -5,14 +5,9 @@ const http = require("http");
 const cors = require("cors");
 const ACTIONS = require("./utils/actions");
 const path = require("path");
-dotenv.config();
+app.use(cors());
 
-aapp.use(cors({ 
-  origin: "https://draw-code-rithvik.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+dotenv.config();
 app.use(express.json());
 
 const { Server } = require("socket.io");
@@ -22,9 +17,6 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "https://draw-code-rithvik.vercel.app",
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type"],
-    credentials: true,
   },
 });
 
@@ -185,5 +177,5 @@ app.get("/", (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
+  console.log(Listening on port ${PORT});
+}); 
