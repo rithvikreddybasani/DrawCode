@@ -9,7 +9,11 @@ app.use(cors())
 
 dotenv.config()
 app.use(express.json())
-
+app.use(cors({
+    origin: "https://draw-code-rithvik.vercel.app", // Your frontend URL
+    methods: ["GET", "POST"],
+    credentials: true, // If needed
+}));
 const { Server } = require("socket.io")
 app.use(express.static(path.join(__dirname, "public")))
 
