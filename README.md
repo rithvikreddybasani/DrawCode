@@ -4,6 +4,8 @@
 
 ![Interface](https://github.com/user-attachments/assets/478d83dd-ec30-407e-b47b-2975f1f3a658)
 
+![WhiteBoard](https://github.com/user-attachments/assets/1b429c43-2599-46ab-8ef9-4083cb8fa124)
+
 
 DrawCode is a collaborative, real-time code editor where users can seamlessly code together. It provides a platform for multiple users to enter a room, share a unique room ID, and collaborate on code simultaneously.
 
