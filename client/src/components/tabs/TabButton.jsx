@@ -9,11 +9,8 @@ function TabButton({ tabName, icon, url }) {
     const { isNewMessage } = useChatRoom();
 
     const handleTabClick = () => {
-        if (url) {
-            // If a URL is provided, open it in a new tab
-            window.open(url, '_blank');
-        } else {
-            // Otherwise, handle tab switching
+        if (!url) {
+            // Handle tab switching only if no URL is provided
             if (tabName === activeTab) {
                 setIsSidebarOpen(!isSidebarOpen);
             } else {
@@ -24,16 +21,31 @@ function TabButton({ tabName, icon, url }) {
     };
 
     return (
-        <button
-            onClick={handleTabClick}
-            className="relative flex items-center justify-center"
-        >
-            {icon}
-            {/* Show dot for new message in chat Tab Button */}
-            {tabName === TABS.CHATS && isNewMessage && (
-                <div className="absolute right-0 top-0 h-3 w-3 rounded-full bg-primary"></div>
+        <>
+            {url ? (
+                // If a URL is provided, render an anchor tag that opens the link in a new tab
+                <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative flex items-center justify-center"
+                >
+                    {icon}
+                </a>
+            ) : (
+                // Otherwise, render a button that switches tabs
+                <button
+                    onClick={handleTabClick}
+                    className="relative flex items-center justify-center"
+                >
+                    {icon}
+                    {/* Show dot for new message in chat Tab Button */}
+                    {tabName === TABS.CHATS && isNewMessage && (
+                        <div className="absolute right-0 top-0 h-3 w-3 rounded-full bg-primary"></div>
+                    )}
+                </button>
             )}
-        </button>
+        </>
     );
 }
 
