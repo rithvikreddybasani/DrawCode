@@ -8,7 +8,7 @@ import STATES from "@/utils/states";
 import TABS from "@/utils/tabs";
 import { IoCodeSlash } from "react-icons/io5";
 import { MdOutlineDraw } from "react-icons/md";
-import { MdCalculate } from 'react-icons/md'; // Import your icon
+import { TbMathIntegralX } from 'react-icons/tb'; // Import the new icon
 
 function Sidebar() {
     const { activeTab, isSidebarOpen, tabComponents, tabIcons } = useTab();
@@ -36,9 +36,11 @@ function Sidebar() {
                 <TabButton tabName={TABS.RUN} icon={tabIcons[TABS.RUN]} />
                 <TabButton tabName={TABS.CLIENTS} icon={tabIcons[TABS.CLIENTS]} />
                 <TabButton tabName={TABS.SETTINGS} icon={tabIcons[TABS.SETTINGS]} />
+
+                {/* AI Calculator tab with TbMathIntegralX icon */}
                 <TabButton
                     tabName={TABS.AI_CALCULATOR}
-                    icon={tabIcons[TABS.AI_CALCULATOR]}
+                    icon={<TbMathIntegralX size={30} />} // Use the new icon here
                     url="https://ai-powered-calculator-2.onrender.com/"
                 />
 
