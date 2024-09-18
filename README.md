@@ -10,6 +10,9 @@
 
 ![](https://github.com/user-attachments/assets/411f9f0c-5745-49f8-b540-c4c41f70cb0d)
 
+![](https://github.com/user-attachments/assets/ed2c6f6e-2039-41d5-8c1e-43c9b5dd79a8)
+
+
 
 
 
@@ -35,6 +38,7 @@ DrawCode is a collaborative, real-time code editor where users can seamlessly co
 -   🎨 Multiple themes for personalized coding experience
 -   🎨 Collaborative Drawing: Enable users to draw and sketch collaboratively in real-time, enhancing the interactive experience of your project.
 -   🔠 An AI Powered Calculator which can solve problems when they are shown diagramatically.
+-   💬 Option of VideoCall is also Present
 
 ## 🚀 Live Preview
 
