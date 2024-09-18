@@ -211,7 +211,7 @@ function FormComponent() {
                 >
                     Generate Unique Room Id
                 </button>
-                <LinkButton href="https://video-app-rithvikreddy.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <LinkButton href="https://console-api-sig.zegocloud.com/s/uikit/F7zAJj" target="_blank" rel="noopener noreferrer">
                     Video Call
                     <span className="label">New</span>
                 </LinkButton>
